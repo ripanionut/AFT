@@ -28,7 +28,7 @@ export default function Calculator() {
 					Programator: Paula Adnana
 					Sireteanu
 				</p>
-				<p class=" text-xl font-bold text-black-500  mt-2 ml-4">
+				<p class="text-xl font-bold text-black-500  mt-2 ml-4">
 					Specializarea: SMCIE
 				</p>
 				<p class=" text-xl font-bold text-black-500   ml-4">
@@ -38,12 +38,11 @@ export default function Calculator() {
         <h1 class="text-center text-3xl font-bold text-black-500 mb-10 mt-4">
 					Scopul Proiectului 
 				</h1>
-        <p class=" text-xl font-bold text-black-500  mt-2 ml-4">
+
+        <p class="text-xl font-bold text-black-500  mt-2 ml-4">
 				Inbunatatirea proceslui de invatara oline prin intermediul platformei create.
-
-
         </p>
-        <p class=" text-xl font-bold text-black-500  mt-2 ml-4">
+        <p class="text-xl font-bold text-black-500  mt-2 ml-4">
         Limbajele folosit in realizarea proiectului sunt cele clasice Html, Css si Javascript.<br></br>
         Ca Framework pentru Css am folosit Tailwind.<br></br>
         Iar Framework pentru Javascript am folist Next.js.

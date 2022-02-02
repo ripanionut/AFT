@@ -43,7 +43,7 @@ export default function Calculator() {
 		for (let i = 0; i < 5; i++) {
 			if (rezistente[i] != 0) j = j + 1;
 		}
-		let rezultat = Rez / j;
+		let rezultat = Rez ;
 
 		console.log(rezultat);
 		setRezultat(rezultat);
