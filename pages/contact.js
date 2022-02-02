@@ -44,7 +44,7 @@ export default function Calculator() {
 				</h1>
 
 				<h1 class="text-xl font-bold text-black-500 mt-2 ml-4">
-					Inbunatatirea proceslui de
+					Inbunatatirea procesului de
 					invatare online prin
 					intermediul platformei create.
 				</h1>
