@@ -43,11 +43,11 @@ export default function Calculator() {
 					Scopul Proiectului
 				</h1>
 
-				<p class="text-xl font-bold text-black-500 mt-2 ml-4">
+				<h1 class="text-xl font-bold text-black-500 mt-2 ml-4">
 					Inbunatatirea proceslui de
 					invatara online prin
 					intermediul platformei create.
-				</p>
+				</h1>
 
 				<h1 class="text-xl font-bold text-black-500 mt-0 ml-4">
 					Limbajele folosit in

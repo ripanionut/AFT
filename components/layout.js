@@ -147,7 +147,7 @@ export default function Layout({ children }) {
 							class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
 							aria-current="page"
 						>
-							Memories
+							Probleme
 						</a>
 
 						<a
@@ -167,6 +167,12 @@ export default function Layout({ children }) {
 							class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
 						>
 							Chestionar
+						</a>
+						<a
+							href="/contact"
+							class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+						>
+							Contact
 						</a>
 					</div>
 				</div>
