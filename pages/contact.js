@@ -57,7 +57,7 @@ export default function Calculator() {
 					Ca Framework pentru Css am
 					folosit Tailwind.<br></br>
 					Iar Framework pentru
-					Javascript am folist Next.js.
+					Javascript am folosit Next.js.
 				</h1>
 			</Layout>
 		</div>
