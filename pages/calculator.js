@@ -44,7 +44,7 @@ export default function Calculator() {
 			if (rezistente[i] != 0) j = j + 1;
 		}
 		let rezultat = Rez / j;
-		
+
 		console.log(rezultat);
 		setRezultat(rezultat);
 	}
@@ -66,20 +66,21 @@ export default function Calculator() {
 			Rpp5,
 		];
 		let j = 0;
-		let Rez =
-			Number(1 / Rpp1) +
-			Number(1 / Rpp2) +
-			Number(1 / Rpp3) +
-			Number(1 / Rpp4) +
-			Number(1 / Rpp5);
+		let Rez = 0;
 		for (let i = 0; i < 5; i++) {
-			if (rezistente[i] != 0) j = j + 1;
+			if (rezistente[i] != 0) 
+		{	j = j + 1;
+			Rez =
+				Rez + Number(1 / rezistente[i]);
+				console.log(Rez)}
 		}
-		let rezultat2 = 1 / Rez / j;
-		rezultat2=rezultat2.toPrecision(3)
+		let rezultat2 =  1/ j / Rez;
+		rezultat2 =
+			rezultat2.toPrecision(4);
 		console.log(rezultat2);
 		setRezultat2(rezultat2);
 	}
+
 	const [rezultat2, setRezultat2] =
 		useState(0);
 	return (
@@ -103,7 +104,7 @@ export default function Calculator() {
 							onSubmit={submitHandler}
 						>
 							<h1 class="text-center text-3xl font-bold text-black-500 mb-10">
-								Rezistenta series
+								Rezistenta serie
 							</h1>
 							<div class="mb-4">
 								<label

@@ -25,7 +25,7 @@ export default function Calculator() {
 			<Layout>
 				<form onSubmit={myFunction}>
 					<div class="block p-5">
-						<span class="text-gray-700">
+						<span class="  font-bold text-black-500  ">
 							Releul termic se foloseşte
 							pentru:
 						</span>
@@ -77,7 +77,7 @@ export default function Calculator() {
 					</div>
 
 					<div class="block p-5">
-						<span class="text-gray-700">
+					<span class="  font-bold text-black-500 ">
 							În cazul conexiunii în
 							stea la transformator
 						</span>
@@ -126,7 +126,7 @@ export default function Calculator() {
 
 
 					<div class="block p-5">
-						<span class="text-gray-700">
+					<span class="  font-bold text-black-500 ">
 							În cazul conexiunii în
 							stea la transformator
 						</span>
@@ -170,7 +170,7 @@ export default function Calculator() {
 
 
 					<div class="block p-5">
-						<span class="text-gray-700">
+					<span class="  font-bold text-black-500 ">
 						Într-un circuit electric monofazat cu caracter inductiv tensiunea este defazata fata de curent:
 						</span>
 						<div class="mt-2">
@@ -214,7 +214,7 @@ export default function Calculator() {
 
 
 					<div class="block p-5">
-						<span class="text-gray-700">
+					<span class="  font-bold text-black-500 ">
 							În cazul conexiunii în
 							stea la transformator
 						</span>
