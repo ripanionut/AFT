@@ -45,7 +45,7 @@ export default function Calculator() {
 
 				<h1 class="text-xl font-bold text-black-500 mt-2 ml-4">
 					Inbunatatirea proceslui de
-					invatara online prin
+					invatare online prin
 					intermediul platformei create.
 				</h1>
 
@@ -53,7 +53,7 @@ export default function Calculator() {
 					Limbajele folosit in
 					realizarea proiectului sunt
 					cele clasice Html, Css si
-					Javascript.<br></br>
+					JavaScript.<br></br>
 					Ca Framework pentru Css am
 					folosit Tailwind.<br></br>
 					Iar Framework pentru
