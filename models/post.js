@@ -2,12 +2,16 @@ import mongoose from "mongoose";
 
 const postSchema = new mongoose.Schema(
   {
-    title: { type: String, required: true },
-    link: { type: String, required: true },
-    description: { type: String, required: true },
-    enteredH1: { type: String, required: false },
-    enteredH2: { type: String, required: false },
-    enteredH3: { type: String, required: false },
+    Id: { type: String, required: true },
+    nume: { type: String, required: true },
+    prenume: { type: String, required: true },
+    pluton: { type: String, required: true },
+    companie: { type: String, required: true },
+    batalion: { type: String, required: true },
+    telefon: { type: Number, required: true },
+    istoric: { type: String, required: false },
+    puncte: { type: String, required: false },
+  
   },
   {
     timestamps: true,

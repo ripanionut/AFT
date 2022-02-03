@@ -21,7 +21,7 @@ async function connect() {
 		await mongoose.disconnect();
 	}
 	const db = await mongoose.connect(
-		"mongodb+srv://ripanionut:ripanionut@cluster1.aeufk.mongodb.net/Proiect300?retryWrites=true&w=majority",
+		"mongodb+srv://ripanionut:ripanionut@cluster1.aeufk.mongodb.net/AFT?retryWrites=true&w=majority",
 		{
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
@@ -68,6 +68,12 @@ handler.get(async (req, res) => {
 	await db.connect();
 	const posts = await Post.find({});
 	res.send(posts);
+});
+
+handler.get(async (req, res) => {
+	await db.connect();
+	const posts = await Post.find({"nume" : "Ripan"});
+	res.send(postsbyname);
 });
 
 export default handler;
