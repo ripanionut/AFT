@@ -21,7 +21,7 @@ export default function Home() {
 			<Layout>
 				<div class="p-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 					{data.map((sd) => (
-						<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+						<div class="max-w-sm bg-gray-50 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 							<div class="p-5">
 								<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
 								{sd.nume} {sd.prenume}
