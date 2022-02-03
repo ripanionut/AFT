@@ -8,7 +8,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export default function Home() {
 	const { data, error } = useSWR("/api/res", fetcher);
 
-	if (error) return <div>failed to load</div>;
+	if (error) return <div>failed to loadd</div>;
 	if (!data) return <div></div>;
 
 	return (
