@@ -28,7 +28,7 @@ export default function Home() {
 								</h5>
 
 								<p class="mb-3 font-bold text-gray-900 dark:text-white">
-								Polutonul {sd.pluton} Companie {sd.companie} Batalion {sd.batalion}
+								Poluton {sd.pluton} Companie {sd.companie} Batalion {sd.batalion}
 								</p>
 								<p class="mb-3 font-bold text-gray-900 dark:text-white">
 								Nr.Telefon: {sd.telefon}
