@@ -1,7 +1,6 @@
 import nc from "next-connect";
 import Post from "../../models/post";
 import mongoose from "mongoose";
-
 const connection = {};
 
 async function connect() {
@@ -70,10 +69,11 @@ handler.get(async (req, res) => {
 	res.send(posts);
 });
 
-handler.get(async (req, res) => {
-	await db.connect();
-	const posts = await Post.find({"nume" : "Ripan"});
-	res.send(postsbyname);
-});
+// handler.get(async (req, res) => {
+// 	await db.connect();
+// 	const posts = await Post.find({"nume" : "Ripan"});
+// 	res.send(postsbyname);
+// });
+
 
 export default handler;

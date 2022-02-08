@@ -1,5 +1,5 @@
 import connectDB from '../../utils/connectDB';
-import Post from '../../models/post';
+import User from '../../models/user';
 
 connectDB();
 
@@ -13,21 +13,19 @@ export default async (req, res) => {
 
 const register = async (req, res) => {
   try {
-    const { Id, nume, prenume, pluton, companie, batalion, telefon, istoric, puncte } = req.body;
+    const {  nume, prenume, email, telefon, password,cf_password } = req.body;
 
-    const newPost = new Post({
-      Id,
+    const  newUser = new User({
       nume,
       prenume,
-      pluton,
-      companie,
-      batalion,
+      email,
       telefon,
-      istoric,
-      puncte
+      password,
+      cf_password
+      
     });
 
-    await newPost.save();
+    await newUser.save();
     res.json({ msg: 'Register Success !' });
   } catch (err) {
     return res.status(500).json({ err: err.message });

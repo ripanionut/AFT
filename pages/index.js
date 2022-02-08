@@ -1,11 +1,12 @@
 import Head from "next/head";
 import Layout from "../components/layout";
-
+import { useState } from "react";
 import useSWR from "swr";
+
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-export default function Home() {
+export default function Home(props) {
 	const { data, error } = useSWR("/api/res", fetcher);
 
 	if (error) return <div>failed to load</div>;
@@ -65,3 +66,5 @@ export default function Home() {
 		</div>
 	);
 }
+
+
