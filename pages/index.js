@@ -9,7 +9,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export default function Home(props) {
 	const { data, error } = useSWR("/api/res", fetcher);
 
-	if (error) return <div>failed to load</div>;
+	if (error) return <div>failed to loadd</div>;
 	if (!data) return <div></div>;
 
 	return (
@@ -20,7 +20,15 @@ export default function Home(props) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Layout>
-				<div class="p-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+			<div class="flex items-center justify-center pt-4 w-100">
+    <div class="flex border-2 border-gray-200 rounded ">
+        <input type="text" class="px-4 py-2 w-60" placeholder="Ex: Ripan ( neimplementat )" />
+        <button class="px-4 text-white bg-gray-600 border-l ">
+            Cauta
+        </button>
+    </div>
+</div>
+				<div class="p-7 pt-5 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 					{data.map((sd) => (
 						<div class="max-w-sm bg-gray-50 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 							<div class="p-5">
