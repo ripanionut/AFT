@@ -1,10 +1,6 @@
 import Head from 'next/head';
-import Notify from './Notify';
-import NavBar from "./Navbar"
 
-export default function Layout({ children }) {
-
-
+export default function Home() {
   return (
     <div>
       <Head>
@@ -13,10 +9,10 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-      <NavBar/>
-      <Notify />
-      {children}
+      <h1 class="m-5 text-2xl">Nu ai drept de administrator</h1>
+      <a href="/" class="mx-5  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Go back
+      </a>
     </div>
   );
 }

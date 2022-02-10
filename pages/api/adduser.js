@@ -1,6 +1,6 @@
 import connectDB from '../../utils/connectDB';
 import User from '../../models/user';
-
+import bcrypt from 'bcrypt';
 connectDB();
 
 export default async (req, res) => {
@@ -13,16 +13,28 @@ export default async (req, res) => {
 
 const register = async (req, res) => {
   try {
-    const {  nume, prenume, email, telefon, password,cf_password } = req.body;
+    const { nume, prenume, email, telefon, password, cf_password } = req.body;
 
-    const  newUser = new User({
+    const user = await User.findOne({ email });
+
+    const telefon2 = await User.findOne({ telefon });
+
+    if (user) {
+      return res.status(400).json({ err: 'Acest email este folosit' });
+    }
+    if (telefon2) {
+      return res.status(400).json({ err: 'Numar de telefon folosit' });
+    }
+
+    const passwordHash = await bcrypt.hash(password, 12);
+
+    const newUser = new User({
       nume,
       prenume,
       email,
       telefon,
-      password,
+      password: passwordHash,
       cf_password
-      
     });
 
     await newUser.save();

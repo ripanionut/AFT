@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Layout from '../components/layout';
 import { useState, useContext } from 'react';
 import validregister from '../utils/validuser';
 import { postData } from '../utils/fetchData';
@@ -16,7 +15,7 @@ export default function Register() {
   };
   const [userData, setUserData] = useState(initialState);
   const { nume, prenume, email, telefon, password, cf_password } = userData;
-  const [state, dispatch] = useContext(DataContext);
+  const{ state, dispatch }= useContext(DataContext);
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -25,19 +24,25 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const errMsg = validregister(nume, prenume, email,telefon, password, cf_password);
+    const errMsg = validregister(
+      nume,
+      prenume,
+      email,
+      telefon,
+      password,
+      cf_password
+    );
     if (errMsg) {
       return dispatch({ type: 'NOTIFY', payload: { error: errMsg } });
     }
     dispatch({ type: 'NOTIFY', payload: { Loading: true } });
 
     const res = await postData('/adduser', userData);
-    console.log(res);
-
-    if (errMsg) {
+    if (res.err)
       return dispatch({ type: 'NOTIFY', payload: { error: res.err } });
-    }
+
     return dispatch({ type: 'NOTIFY', payload: { success: res.msg } });
+    console.log(res);
   };
 
   return (
@@ -47,10 +52,12 @@ export default function Register() {
           <title>Welcome to Next.js!</title>
         </Head>
       </div>
-      <Layout>
+      
         <div class="flex justify-center pt-3 px-0">
           <div class="w-11/12 p-2 bg-white sm:w-11/12 md:w-3/4 lg:w-8/12">
-            <h1 class="text-xl text-center pb-3 font-semibold">Hello there 👋</h1>
+            <h1 class="text-xl text-center pb-3 font-semibold">
+              Hello there 👋
+            </h1>
             <form class="mt-6" onSubmit={handleSubmit}>
               <div class="flex justify-between gap-3">
                 <span class="w-1/2">
@@ -71,7 +78,9 @@ export default function Register() {
                   />
                 </span>
                 <span class="w-1/2">
-                  <label for="lastname" class="block text-xs font-semibold text-gray-600 uppercase">
+                  <label
+                    for="lastname"
+                    class="block text-xs font-semibold text-gray-600 uppercase">
                     Prenume
                   </label>
                   <input
@@ -83,11 +92,12 @@ export default function Register() {
                     placeholder="Doe"
                     autocomplete="family-name"
                     class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
-                    
                   />
                 </span>
               </div>
-              <label for="email" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">
+              <label
+                for="email"
+                class="block mt-2 text-xs font-semibold text-gray-600 uppercase">
                 E-mail
               </label>
               <input
@@ -99,9 +109,10 @@ export default function Register() {
                 placeholder="email.doe@company.com"
                 autocomplete="email"
                 class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
-                
               />
-              <label for="telefon" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">
+              <label
+                for="telefon"
+                class="block mt-2 text-xs font-semibold text-gray-600 uppercase">
                 telefon
               </label>
               <input
@@ -112,7 +123,6 @@ export default function Register() {
                 onChange={handleChangeInput}
                 placeholder="07********"
                 class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
-                
               />
               <label
                 for="password"
@@ -128,7 +138,6 @@ export default function Register() {
                 placeholder="********"
                 autocomplete="new-password"
                 class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
-                
               />
               <label
                 for="password-confirm"
@@ -144,7 +153,6 @@ export default function Register() {
                 placeholder="********"
                 autocomplete="new-password"
                 class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
-                
               />
               <button
                 href="/registeruser"
@@ -160,7 +168,7 @@ export default function Register() {
             </form>
           </div>
         </div>
-      </Layout>
+      
     </div>
   );
 }
