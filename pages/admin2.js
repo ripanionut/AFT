@@ -20,7 +20,7 @@ export default function Admin2() {
       <div className="lg:mx-48 md:mx-24">
         <Link href="/registeruser">
           <a className="m-5 text-white bg-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-            Creaza cont utilizator ( Cadre ) 
+            Creaza cont utilizator (Cadre) 
           </a>
         </Link>
         <Link href="/admin">
