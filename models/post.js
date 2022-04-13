@@ -11,12 +11,13 @@ const postSchema = new mongoose.Schema(
     telefon: { type: Number, required: true },
     istoric: { type: String, required: false },
     puncte: { type: String, required: false },
+    punctearr: { type: Array, required: false },
   
   },
   {
     timestamps: true,
   }
 );
-const Post =
+let Post =
   mongoose.models.Post || mongoose.model("Post", postSchema);
 export default Post;

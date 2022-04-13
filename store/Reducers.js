@@ -1,4 +1,4 @@
-import  ACTIONS  from './Actions'
+import ACTIONS from './Actions';
 const reducers = (state, action) => {
   switch (action.type) {
     case ACTIONS.NOTIFY:
@@ -11,9 +11,15 @@ const reducers = (state, action) => {
         ...state,
         auth: action.payload
       };
+    case ACTIONS.ADD_USERS:
+      return {
+        ...state,
+        users: action.payload
+      };
+
     default:
       return state;
   }
 };
 
-export default reducers
+export default reducers;

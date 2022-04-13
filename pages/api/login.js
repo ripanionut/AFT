@@ -35,10 +35,11 @@ const login = async (req, res) => {
       refresh_token,
       access_token,
       user: {
-        name: user.name,
+        nume: user.nume,
+        prenume: user.prenume,
         email: user.email,
-        telefon: user.telefon,
         role: user.role,
+        telefon: user.telefon,
         root: user.root
       }
     });

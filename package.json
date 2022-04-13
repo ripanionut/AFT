@@ -11,6 +11,7 @@
     "@heroicons/react": "^1.0.5",
     "axios": "^0.25.0",
     "bcrypt": "^5.0.1",
+    "cookie": "^0.4.2",
     "js-cookie": "^3.0.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.3.1",

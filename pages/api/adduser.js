@@ -20,10 +20,10 @@ const register = async (req, res) => {
     const telefon2 = await User.findOne({ telefon });
 
     if (user) {
-      return res.status(400).json({ err: 'Acest email este folosit' });
+      return res.status(400).json({ err: ': Acest email este folosit' });
     }
     if (telefon2) {
-      return res.status(400).json({ err: 'Numar de telefon folosit' });
+      return res.status(400).json({ err: ': Numar de telefon folosit' });
     }
 
     const passwordHash = await bcrypt.hash(password, 12);
