@@ -3,7 +3,7 @@ import valid from '../utils/valid';
 import { postData } from '../utils/fetchData';
 import { DataContext } from '../store/GlobalState';
 import { useRouter } from 'next/router';
-
+import Link from 'next/link';
 export default function AddSd() {
   const initialState = {
     Id: '',
@@ -264,12 +264,13 @@ export default function AddSd() {
               className="shadow bg-red-500 hover:bg-red-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
               Adauga
             </button>
+            <Link href="/admin">
             <a
-              href="/admin"
               type="reset"
               className=" mx-3 shadow bg-green-500 hover:bg-green-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
               Lista Studenti
             </a>
+            </Link>
           </div>
         </form>
       </div>
