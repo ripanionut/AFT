@@ -1,5 +1,5 @@
 import Notify from './Notify';
-import NavBar from './Navbar';
+import NavBar from './NavBar';
 import React from "react";
 
 export default function Layout({ children }) {
