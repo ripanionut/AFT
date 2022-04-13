@@ -48,6 +48,7 @@ const Login = () => {
   };
   useEffect(() => {
     if (Object.keys(auth).length !== 0) router.push('/');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [auth]);
   return (
     <div>

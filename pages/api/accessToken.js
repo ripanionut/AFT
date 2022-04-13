@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import connectDB from '../../utils/connectDB';
 import User from '../../models/user';
 import jwt from 'jsonwebtoken';

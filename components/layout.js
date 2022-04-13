@@ -9,6 +9,7 @@ export default function Layout({ children }) {
       <NavBar />
       <Notify />
       {children}
+      
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { DataContext } from '../store/GlobalState';
 import Cookie from 'js-cookie';
+import Image from "next/image"
 
 function NavBar() {
   const { state, dispatch } = useContext(DataContext);
@@ -102,10 +103,10 @@ function NavBar() {
                   aria-haspopup="true"
                   target="_black">
                   <span className="sr-only">Open user menu</span>
-                  <img
+                  <Image
                     className="h-11 w-11 rounded-full"
                     src="\images\logo.png"
-                    alt=""></img>
+                    alt=""></Image>
                 </a>
               </Link>
             </div>
