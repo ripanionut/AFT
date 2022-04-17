@@ -41,12 +41,12 @@ export default function Admin2() {
         </Link>
         <Link href="/detail">
           <a className="m-5 text-white bg-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-            Admin2 - Editare studenti - soon... 
+            Editare studenti / cadre{' '}- soon... 
           </a>
         </Link>
         <Link href="/detail">
           <a className="m-5 text-white bg-gray-800 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-            Aplicare Santiuni / Recompense - soon... 
+           Loguri - soon... 
           </a>
         </Link>
       </div>

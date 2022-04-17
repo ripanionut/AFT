@@ -1,5 +1,4 @@
 import Link from 'next/Link';
-
 const Regulament = () => {
   return (
     <div>
@@ -35,15 +34,15 @@ const Regulament = () => {
                     <td className="px-2 py-4 text-md text-gray-500">1</td>
                     <td className="px-2 py-4">
                       <div className="text-md text-gray-900">
-                        Nerespecarea regulilor de igiena individuala si colectiva.
+                       Obtinerea locului I-III la concursurile sportive <br />cultural-artistice, militare sau civile.<br />
                       </div>
                     </td>
 
                     <td className="px-2 py-4">
                       <a
                         href="#"
-                        className="px-2 py-1 text-md text-white bg-red-400 rounded">
-                        +10
+                        className="px-2 py-1 text-md text-white bg-green-500 rounded">
+                        +10-20
                       </a>
                     </td>
                   </tr>
@@ -51,32 +50,19 @@ const Regulament = () => {
                     <td className="px-2 py-4 text-md text-gray-500">2</td>
                     <td className="px-2 py-4">
                       <div className="text-md text-gray-900">
-                        Devierea, fara motiv intemeiat, de la itinerariul
-                        <br /> fixat pentru indeplinirea misiunii.
+                     Participarea la sesiuni de comunicare stintiifice <br/>nationale-(n) si intenationale-(i)
                       </div>
                     </td>
 
                     <td className="px-2 py-4">
                       <a
                         href="#"
-                        className="px-2 py-1 text-md text-white bg-red-400 rounded">
-                        +10{' '}
-                      </a>
-                    </td>
-                  </tr>
-                  <tr className="">
-                    <td className="px-2 py-4 text-md text-gray-500">3</td>
-                    <td className="px-2 py-4">
-                      <div className="text-md text-gray-900">
-                        Neincadrarea in programul orar al unitatii
-                      </div>
-                    </td>
-
-                    <td className="px-2 py-4">
-                      <a
+                        className="px-2 py-1 text-md text-white bg-green-500 rounded">
+                        +10-(n)
+                      </a> <a
                         href="#"
-                        className="px-2 py-1 text-md text-white bg-red-400 rounded">
-                        +10
+                        className="px-2 py-1 text-md text-white bg-green-500 rounded">
+                        +20-(i)
                       </a>
                     </td>
                   </tr>
@@ -87,12 +73,12 @@ const Regulament = () => {
                     </td>
 
                     <td className="px-2 py-4">
-                      
                       <a
                         href="#"
-                        className="px-2 py-1 text-md text-white bg-red-400 rounded">
+                        className="px-2 py-1 text-md text-white bg-green-500 rounded">
                         ...
                       </a>
+                      
                     </td>
                   </tr>
                 </tbody>
