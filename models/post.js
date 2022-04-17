@@ -11,7 +11,7 @@ const postSchema = new mongoose.Schema(
     telefon: { type: Number, required: true },
     istoric: { type: String, required: false },
     puncte: { type: String, required: false },
-    punctearr: { type: Array, required: false },
+    punctearr: { type: Array, required: false,default:[{ date: '1', motiv: '1', puncte: '1' }] },
   
   },
   {

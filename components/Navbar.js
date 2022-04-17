@@ -76,7 +76,7 @@ function NavBar() {
         <p
           style={{ textTransform: 'capitalize' }}
           className=" text-gray-300 hover:bg-gray-500 hover:text-white px-1 py-2 rounded-md text-md font-medium">
-          {auth.user.nume} {auth.user.prenume}
+         
         </p>
 
         <button

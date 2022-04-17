@@ -1,12 +1,10 @@
 import { useState, useContext } from 'react';
 import { getData } from '../../utils/fetchData';
 import { DataContext } from '../../store/GlobalState';
-import Link from 'next/link';
 import { putData } from '../../utils/fetchData';
 
 const DetailProduct = (props) => {
   const [post] = useState(props.post);
-  // console.log(post.punctearr)
 
   const { state, dispatch } = useContext(DataContext);
   const { auth } = state;
@@ -48,7 +46,7 @@ const DetailProduct = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await putData(
+     await putData(
       `post/${post._id}`,
       { inputList, totalpuncte, inputIstoric },
       auth.token
@@ -65,15 +63,7 @@ const DetailProduct = (props) => {
   var statee = {
     curTime: new Date().toLocaleString()
   };
-  const loggedRouter = () => {
-    return (
-      <>
-        {auth.user.role === 'admin'}
-        <></>
-      </>
-    );
-  };
-
+ 
   return (
     <div>
       <h1 className="pt-4 text-xl text-center font-semibold">

@@ -27,8 +27,6 @@ export const DataProvider = ({ children }) => {
 
   useEffect(() => {
     if (auth.token) {
-      console.log(auth.user.role);
-
       if (auth.user.role === 'admin') {
         getData('user', auth.token).then((res) => {
           if (res.err)
@@ -40,6 +38,7 @@ export const DataProvider = ({ children }) => {
     } else {
       dispatch({ type: 'ADD_USERS', payload: [] });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [auth.token]);
 
   return (
