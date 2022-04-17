@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const postSchema = new mongoose.Schema(
   {
-    Id: { type: String, required: true },
+    Id: { type: String, required: false },
     nume: { type: String, required: true },
     prenume: { type: String, required: true },
     pluton: { type: String, required: true },

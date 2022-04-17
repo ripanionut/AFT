@@ -81,7 +81,7 @@ export default function AddSd() {
               <label
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                 htmlFor="grid-password">
-                Id/CNP{' '}
+                Id/CNP - OPTIONAL
               </label>
               <input
                 className="appearance-none block w-full bg-gray-200 border-red-500 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -265,7 +265,7 @@ export default function AddSd() {
               className="shadow bg-red-500 hover:bg-red-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
               Adauga
             </button>
-            <Link href="/admin">
+            <Link href="/">
             <a
               type="reset"
               className=" mx-3 shadow bg-green-500 hover:bg-green-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
