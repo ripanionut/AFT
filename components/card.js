@@ -1,7 +1,7 @@
 import { getData } from '../utils/fetchData';
 import { useState } from 'react';
 import Head from 'next/head';
-
+import Link from 'next/link';
 const Card = ({ sd }) => {
   return (
     <div
@@ -23,8 +23,8 @@ const Card = ({ sd }) => {
         <p className="mb-3 font-bold text-gray-900 dark:text-white">
           Puncte: {sd.puncte}
         </p>
+        <Link href={`post/${sd._id}`}>
         <a
-          href={`post/${sd._id}`}
           className="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Mai multe informatii
           <svg
@@ -38,6 +38,7 @@ const Card = ({ sd }) => {
               clipRule="evenodd"></path>
           </svg>
         </a>
+        </Link>
       </div>
     </div>
   );
